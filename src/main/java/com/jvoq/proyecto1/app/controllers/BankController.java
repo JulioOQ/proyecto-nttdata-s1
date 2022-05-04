@@ -29,24 +29,24 @@ public class BankController {
 	BankService bankService;
 
 	@GetMapping
-	public Mono<ResponseEntity<Flux<Bank>>> listar() {
+	public Mono<ResponseEntity<Flux<Bank>>> getAll() {
 		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(bankService.findAll()));
 	}
 
 	@GetMapping("/{id}")
-	public Mono<ResponseEntity<Bank>> verDetalle(@PathVariable String id) {
+	public Mono<ResponseEntity<Bank>> getById(@PathVariable String id) {
 		return bankService.findById(id).map(b -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(b))
 				.defaultIfEmpty(ResponseEntity.notFound().build());
 	}
 
 	@PostMapping
-	public Mono<ResponseEntity<Bank>> crear(@RequestBody Bank bank) {
+	public Mono<ResponseEntity<Bank>> create(@RequestBody Bank bank) {
 		return bankService.save(bank).map(b -> ResponseEntity.created(URI.create("/banks".concat(b.getIdBanco())))
 				.contentType(MediaType.APPLICATION_JSON).body(b));
 	}
 
 	@PutMapping("/{id}")
-	public Mono<ResponseEntity<Bank>> editar(@RequestBody Bank bank, @PathVariable String id) {
+	public Mono<ResponseEntity<Bank>> update(@RequestBody Bank bank, @PathVariable String id) {
 		return bankService.findById(id).flatMap(b -> {
 			b.setNombreBanco(bank.getNombreBanco());
 			b.setTotalTransferencia(bank.getTotalTransferencia());
@@ -57,7 +57,7 @@ public class BankController {
 	}
 
 	@DeleteMapping("/{id}")
-	public Mono<ResponseEntity<Void>> eliminar(@PathVariable String id) {
+	public Mono<ResponseEntity<Void>> drop(@PathVariable String id) {
 		return bankService.findById(id).flatMap(b -> {
 			return bankService.delete(b).then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));
 		}).defaultIfEmpty(new ResponseEntity<Void>(HttpStatus.NOT_FOUND));

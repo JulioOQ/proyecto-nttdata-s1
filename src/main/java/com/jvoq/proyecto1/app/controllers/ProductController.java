@@ -29,26 +29,26 @@ public class ProductController {
 	private ProductService productService;
 
 	@GetMapping
-	public Mono<ResponseEntity<Flux<Product>>> listar() {
+	public Mono<ResponseEntity<Flux<Product>>> getAll() {
 		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(productService.findAll()));
 	}
 
 	@GetMapping("/{id}")
-	public Mono<ResponseEntity<Product>> verDetalle(@PathVariable String id) {
+	public Mono<ResponseEntity<Product>> getById(@PathVariable String id) {
 		return productService.findById(id).map(p -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(p))
 				.defaultIfEmpty(ResponseEntity.notFound().build());
 
 	}
 
 	@PostMapping
-	public Mono<ResponseEntity<Product>> crear(@RequestBody Product product) {
+	public Mono<ResponseEntity<Product>> create(@RequestBody Product product) {
 		return productService.save(product)
 				.map(p -> ResponseEntity.created(URI.create("/products".concat(p.getIdProducto())))
 						.contentType(MediaType.APPLICATION_JSON).body(p));
 	}
 
 	@PutMapping("/{id}")
-	public Mono<ResponseEntity<Product>> editar(@RequestBody Product product, @PathVariable String id) {
+	public Mono<ResponseEntity<Product>> update(@RequestBody Product product, @PathVariable String id) {
 		return productService.findById(id).flatMap(p -> {
 			p.setNombreProducto(product.getNombreProducto());
 			p.setDescripcion(product.getDescripcion());
@@ -60,7 +60,7 @@ public class ProductController {
 	}
 
 	@DeleteMapping("/{id}")
-	public Mono<ResponseEntity<Void>> eliminar(@PathVariable String id) {
+	public Mono<ResponseEntity<Void>> drop(@PathVariable String id) {
 		return productService.findById(id).flatMap(p -> {
 			return productService.delete(p).then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));
 		}).defaultIfEmpty(new ResponseEntity<Void>(HttpStatus.NOT_FOUND));

@@ -28,26 +28,26 @@ public class CompanyController {
 	private CompanyService companyService;
 
 	@GetMapping
-	public Mono<ResponseEntity<Flux<Company>>> listar() {
+	public Mono<ResponseEntity<Flux<Company>>> getAll() {
 		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(companyService.findAll()));
 	}
 
 	@GetMapping("/{id}")
-	public Mono<ResponseEntity<Company>> verDetalle(@PathVariable String id) {
+	public Mono<ResponseEntity<Company>> getById(@PathVariable String id) {
 		return companyService.findById(id).map(c -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(c))
 				.defaultIfEmpty(ResponseEntity.notFound().build());
 
 	}
 
 	@PostMapping
-	public Mono<ResponseEntity<Company>> crear(@RequestBody Company company) {
+	public Mono<ResponseEntity<Company>> create(@RequestBody Company company) {
 		return companyService.save(company)
 				.map(c -> ResponseEntity.created(URI.create("/companies".concat(c.getIdEmpresa())))
 						.contentType(MediaType.APPLICATION_JSON).body(c));
 	}
 
 	@PutMapping("/{id}")
-	public Mono<ResponseEntity<Company>> editar(@RequestBody Company company, @PathVariable String id) {
+	public Mono<ResponseEntity<Company>> update(@RequestBody Company company, @PathVariable String id) {
 		return companyService.findById(id).flatMap(c -> {
 			c.setNombreEmpresa(company.getNombreEmpresa());
 			c.setRuc(company.getRuc());
@@ -58,7 +58,7 @@ public class CompanyController {
 	}
 
 	@DeleteMapping("/{id}")
-	public Mono<ResponseEntity<Void>> eliminar(@PathVariable String id) {
+	public Mono<ResponseEntity<Void>> drop(@PathVariable String id) {
 		return companyService.findById(id).flatMap(c -> {
 			return companyService.delete(c).then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));
 		}).defaultIfEmpty(new ResponseEntity<Void>(HttpStatus.NOT_FOUND));

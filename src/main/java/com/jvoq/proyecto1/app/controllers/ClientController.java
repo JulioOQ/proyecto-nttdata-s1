@@ -30,19 +30,19 @@ public class ClientController {
 	private ClientService clientService;
 
 	@GetMapping
-	public Mono<ResponseEntity<Flux<Client>>> listar() {
+	public Mono<ResponseEntity<Flux<Client>>> getAll() {
 		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(clientService.findAll()));
 	}
 
 	@GetMapping("/{id}")
-	public Mono<ResponseEntity<Client>> verDetalle(@PathVariable String id) {
+	public Mono<ResponseEntity<Client>> getById(@PathVariable String id) {
 		return clientService.findById(id).map(c -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(c))
 				.defaultIfEmpty(ResponseEntity.notFound().build());
 
 	}
 
 	@PostMapping
-	public Mono<ResponseEntity<Client>> crear(@RequestBody Client client) {
+	public Mono<ResponseEntity<Client>> create(@RequestBody Client client) {
 		if (client.getFechaCreacion() == null) {
 			client.setFechaCreacion(new Date());
 
@@ -53,7 +53,7 @@ public class ClientController {
 	}
 
 	@PutMapping("/{id}")
-	public Mono<ResponseEntity<Client>> editar(@RequestBody Client client, @PathVariable String id) {
+	public Mono<ResponseEntity<Client>> update(@RequestBody Client client, @PathVariable String id) {
 		return clientService.findById(id).flatMap(c -> {
 			c.setNombres(client.getNombres());
 			c.setCorreo(client.getCorreo());
@@ -65,7 +65,7 @@ public class ClientController {
 	}
 
 	@DeleteMapping("/{id}")
-	public Mono<ResponseEntity<Void>> eliminar(@PathVariable String id) {
+	public Mono<ResponseEntity<Void>> drop(@PathVariable String id) {
 		return clientService.findById(id).flatMap(c -> {
 			return clientService.delete(c).then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));
 		}).defaultIfEmpty(new ResponseEntity<Void>(HttpStatus.NOT_FOUND));
