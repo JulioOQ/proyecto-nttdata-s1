@@ -6,7 +6,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public interface BankService {
-	
+
 	public Flux<Bank> findAll();
 
 	public Mono<Bank> findById(String id);

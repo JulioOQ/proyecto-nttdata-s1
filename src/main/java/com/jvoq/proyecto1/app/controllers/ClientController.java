@@ -25,62 +25,50 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/clients")
 public class ClientController {
-	
+
 	@Autowired
 	private ClientService clientService;
-	
-	
+
 	@GetMapping
-	public Mono<ResponseEntity<Flux<Client>>> listar(){
-		return Mono.just(ResponseEntity.ok()
-				.contentType(MediaType.APPLICATION_JSON)
-				.body(clientService.findAll())
-				);
+	public Mono<ResponseEntity<Flux<Client>>> listar() {
+		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(clientService.findAll()));
 	}
-	
+
 	@GetMapping("/{id}")
-	public Mono<ResponseEntity<Client>> verDetalle(@PathVariable String id){
-		return clientService.findById(id).map(p -> ResponseEntity.ok()
-				.contentType(MediaType.APPLICATION_JSON)
-				.body(p)).defaultIfEmpty(ResponseEntity.notFound().build());
-				
+	public Mono<ResponseEntity<Client>> verDetalle(@PathVariable String id) {
+		return clientService.findById(id).map(c -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(c))
+				.defaultIfEmpty(ResponseEntity.notFound().build());
+
 	}
-	
+
 	@PostMapping
-	public Mono<ResponseEntity<Client>> crear(@RequestBody Client client){
-		if(client.getFechaCreacion()==null) {
+	public Mono<ResponseEntity<Client>> crear(@RequestBody Client client) {
+		if (client.getFechaCreacion() == null) {
 			client.setFechaCreacion(new Date());
-			
+
 		}
-		return clientService.save(client).map(c -> ResponseEntity
-				.created(URI.create("/produtos".concat(c.getIdCliente())))
-				.contentType(MediaType.APPLICATION_JSON)
-				.body(c));
+		return clientService.save(client)
+				.map(c -> ResponseEntity.created(URI.create("/clients".concat(c.getIdCliente())))
+						.contentType(MediaType.APPLICATION_JSON).body(c));
 	}
-	
+
 	@PutMapping("/{id}")
-	public Mono<ResponseEntity<Client>> editar(@RequestBody Client client, @PathVariable String id){
+	public Mono<ResponseEntity<Client>> editar(@RequestBody Client client, @PathVariable String id) {
 		return clientService.findById(id).flatMap(c -> {
 			c.setNombres(client.getNombres());
 			c.setCorreo(client.getCorreo());
 			c.setNumDocumento(client.getNumDocumento());
-			
+
 			return clientService.save(c);
-		}).map(c->ResponseEntity.created(URI.create("/productos".concat(c.getIdCliente())))
-				.contentType(MediaType.APPLICATION_JSON)
-				.body(c))
-		.defaultIfEmpty(ResponseEntity.notFound().build());
+		}).map(c -> ResponseEntity.created(URI.create("/clients".concat(c.getIdCliente())))
+				.contentType(MediaType.APPLICATION_JSON).body(c)).defaultIfEmpty(ResponseEntity.notFound().build());
 	}
-	
+
 	@DeleteMapping("/{id}")
-	public Mono<ResponseEntity<Void>> eliminar(@PathVariable String id){
-		return clientService.findById(id).flatMap(c ->{
+	public Mono<ResponseEntity<Void>> eliminar(@PathVariable String id) {
+		return clientService.findById(id).flatMap(c -> {
 			return clientService.delete(c).then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));
 		}).defaultIfEmpty(new ResponseEntity<Void>(HttpStatus.NOT_FOUND));
 	}
-	
-	
-	
-	
 
 }

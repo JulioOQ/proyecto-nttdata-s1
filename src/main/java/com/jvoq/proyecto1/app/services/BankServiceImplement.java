@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class BankServiceImplement implements BankService {
-	
+
 	@Autowired
 	BankRepository bankRepository;
 
