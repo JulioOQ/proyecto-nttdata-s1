@@ -3,10 +3,19 @@ package com.jvoq.proyecto1.app.models.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 
 
 @Document(collection = "banks")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Bank {
 	
 	@Id
@@ -14,40 +23,6 @@ public class Bank {
 	private String nombreBanco;
 	private String totalTransferencia;
 		
-	
-	
-	public Bank(String idBanco, String nombreBanco, String totalTransferencia) {
-		super();
-		this.idBanco = idBanco;
-		this.nombreBanco = nombreBanco;
-		this.totalTransferencia = totalTransferencia;
-	}
-	
-	public Bank() {
-		
-	}
-	
-	
-	
-	public String getIdBanco() {
-		return idBanco;
-	}
-	public void setIdBanco(String idBanco) {
-		this.idBanco = idBanco;
-	}
-	public String getNombreBanco() {
-		return nombreBanco;
-	}
-	public void setNombreBanco(String nombreBanco) {
-		this.nombreBanco = nombreBanco;
-	}
-	public String getTotalTransferencia() {
-		return totalTransferencia;
-	}
-	public void setTotalTransferencia(String totalTransferencia) {
-		this.totalTransferencia = totalTransferencia;
-	}
-	
 	
 	
 	
