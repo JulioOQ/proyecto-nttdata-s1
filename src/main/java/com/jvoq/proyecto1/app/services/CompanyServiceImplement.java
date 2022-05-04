@@ -16,7 +16,7 @@ public class CompanyServiceImplement implements CompanyService {
 	private CompanyRepository companyRepository;
 
 	@Override
-	public Flux<Company> listar() {
+	public Flux<Company> findAll() {
 		return companyRepository.findAll();
 	}
 

@@ -40,9 +40,9 @@ public class ClientController {
 	
 	@GetMapping("/{id}")
 	public Mono<ResponseEntity<Client>> verDetalle(@PathVariable String id){
-		return clientService.findById(id).map(p -> ResponseEntity.ok()
+		return clientService.findById(id).map(c -> ResponseEntity.ok()
 				.contentType(MediaType.APPLICATION_JSON)
-				.body(p)).defaultIfEmpty(ResponseEntity.notFound().build());
+				.body(c)).defaultIfEmpty(ResponseEntity.notFound().build());
 				
 	}
 	
@@ -53,7 +53,7 @@ public class ClientController {
 			
 		}
 		return clientService.save(client).map(c -> ResponseEntity
-				.created(URI.create("/produtos".concat(c.getIdCliente())))
+				.created(URI.create("/clients".concat(c.getIdCliente())))
 				.contentType(MediaType.APPLICATION_JSON)
 				.body(c));
 	}
@@ -66,7 +66,7 @@ public class ClientController {
 			c.setNumDocumento(client.getNumDocumento());
 			
 			return clientService.save(c);
-		}).map(c->ResponseEntity.created(URI.create("/productos".concat(c.getIdCliente())))
+		}).map(c->ResponseEntity.created(URI.create("/clients".concat(c.getIdCliente())))
 				.contentType(MediaType.APPLICATION_JSON)
 				.body(c))
 		.defaultIfEmpty(ResponseEntity.notFound().build());

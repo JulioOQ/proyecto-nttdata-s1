@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 
 public interface CompanyService {
 
-	public Flux<Company> listar();
+	public Flux<Company> findAll();
 
 	public Mono<Company> findById(String id);
 
