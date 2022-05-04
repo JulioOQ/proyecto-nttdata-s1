@@ -1,7 +1,6 @@
 package com.jvoq.proyecto1.app.controllers;
 
 import java.net.URI;
-import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jvoq.proyecto1.app.models.entity.Product;
-import com.jvoq.proyecto1.app.models.entity.Product;
 import com.jvoq.proyecto1.app.services.ProductService;
 
 import reactor.core.publisher.Flux;
@@ -26,6 +24,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
+	
 	@Autowired
 	private ProductService productService;
 
@@ -50,21 +49,20 @@ public class ProductController {
 
 	@PutMapping("/{id}")
 	public Mono<ResponseEntity<Product>> editar(@RequestBody Product product, @PathVariable String id) {
-		return productService.findById(id).flatMap(c -> {
-			c.setNombreProducto(product.getNombreProducto());
-			c.setDescripcion(product.getDescripcion());
-			c.setTipoProducto(product.getTipoProducto());
+		return productService.findById(id).flatMap(p -> {
+			p.setNombreProducto(product.getNombreProducto());
+			p.setDescripcion(product.getDescripcion());
+			p.setTipoProducto(product.getTipoProducto());
 
-			return productService.save(c);
-		}).map(c -> ResponseEntity.created(URI.create("/products".concat(c.getIdProducto())))
-				.contentType(MediaType.APPLICATION_JSON).body(c)).defaultIfEmpty(ResponseEntity.notFound().build());
+			return productService.save(p);
+		}).map(p -> ResponseEntity.created(URI.create("/products".concat(p.getIdProducto())))
+				.contentType(MediaType.APPLICATION_JSON).body(p)).defaultIfEmpty(ResponseEntity.notFound().build());
 	}
 
 	@DeleteMapping("/{id}")
 	public Mono<ResponseEntity<Void>> eliminar(@PathVariable String id) {
-		return productService.findById(id).flatMap(c -> {
-			return productService.delete(c).then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));
+		return productService.findById(id).flatMap(p -> {
+			return productService.delete(p).then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));
 		}).defaultIfEmpty(new ResponseEntity<Void>(HttpStatus.NOT_FOUND));
 	}
-
 }
