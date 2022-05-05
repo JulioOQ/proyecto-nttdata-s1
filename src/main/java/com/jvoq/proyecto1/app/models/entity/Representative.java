@@ -1,7 +1,5 @@
 package com.jvoq.proyecto1.app.models.entity;
 
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,18 +8,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Document(collection = "companies")
+@Document(collection = "representatives")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Company {
-
+public class Representative {
+	
 	@Id
+	private String idRepresentante;
 	private String idEmpresa;
-	private String nombreEmpresa;
-	private Long ruc;
-	private String direccion;
-	private List<Representative> representatives;
-
+	private String idCliente;
+	
 }
