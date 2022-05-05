@@ -12,6 +12,8 @@ public interface AccountService {
 	public Mono<Account> findById(String id);
 
 	public Mono<Account> save(Account account);
+	
+	public Mono<Account> findByIdClient(String idClient);
 
 	public Mono<Void> delete(Account account);
 }

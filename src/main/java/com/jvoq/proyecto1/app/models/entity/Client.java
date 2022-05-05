@@ -20,13 +20,14 @@ public class Client {
 	@Id
 	private String idCliente;
 	private String nombres;
+	private String correo;
+	private String direccion;
+	private String telefono;
 	private String tipoDocumento;
 	private String numDocumento;
-	private String correo;
-	private String tipoCliente;	
-	private Date fechaCreacion;
+	private String tipoCliente;
 	private List<String> representantes;
-	private List<Bank> banks;
+	private Date fechaCreacion;
 	
 
 }

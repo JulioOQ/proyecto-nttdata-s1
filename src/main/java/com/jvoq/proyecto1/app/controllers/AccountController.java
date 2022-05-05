@@ -39,6 +39,13 @@ public class AccountController {
 				.defaultIfEmpty(ResponseEntity.notFound().build());
 	}
 
+	@GetMapping("/client/{id}")
+	public Mono<ResponseEntity<Account>> getAccountByIdClient(@PathVariable String id) {
+		return accountService.findByIdClient(id)
+				.map(a -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(a))
+				.defaultIfEmpty(ResponseEntity.notFound().build());
+	}
+
 	@PostMapping
 	public Mono<ResponseEntity<Account>> create(@RequestBody Account account) {
 		return accountService.save(account)
@@ -49,11 +56,11 @@ public class AccountController {
 	@PutMapping("/{id}")
 	public Mono<ResponseEntity<Account>> update(@RequestBody Account account, @PathVariable String id) {
 		return accountService.findById(id).flatMap(a -> {
-			//a.setNombreCuenta(account.getNombreCuenta());
+			a.setIdProducto(account.getIdProducto());
+			a.setIdCliente(account.getIdCliente());
+			a.setNumeroCuenta(account.getNumeroCuenta());
+			a.setMoneda(account.getMoneda());
 			a.setSaldo(account.getSaldo());
-			//a.setTipoCuenta(account.getTipoCuenta());
-			a.setTipoMoneda(account.getTipoMoneda());
-			a.setBank(account.getBank());
 
 			return accountService.save(a);
 		}).map(a -> ResponseEntity.created(URI.create("/accounts".concat(a.getIdCuenta())))

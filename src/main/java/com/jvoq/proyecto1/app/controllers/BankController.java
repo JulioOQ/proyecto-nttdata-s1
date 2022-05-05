@@ -48,9 +48,12 @@ public class BankController {
 	@PutMapping("/{id}")
 	public Mono<ResponseEntity<Bank>> update(@RequestBody Bank bank, @PathVariable String id) {
 		return bankService.findById(id).flatMap(b -> {
-			b.setNombreBanco(bank.getNombreBanco());
-			b.setTotalTransferencia(bank.getTotalTransferencia());
-			b.setProduct(bank.getProduct());
+			b.setNombre(bank.getNombre());
+			b.setCorreo(bank.getCorreo());
+			b.setDireccion(bank.getDireccion());
+			b.setTelefono(bank.getTelefono());
+			b.setTipoDocumento(bank.getTipoDocumento());
+			b.setNumDocumento(bank.getNumDocumento());
 
 			return bankService.save(b);
 		}).map(b -> ResponseEntity.created(URI.create("/banks".concat(b.getIdBanco())))

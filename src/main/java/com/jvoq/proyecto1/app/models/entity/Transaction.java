@@ -1,5 +1,7 @@
 package com.jvoq.proyecto1.app.models.entity;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,17 +10,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Document(collection = "products")
+@Document(collection = "transactions")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product {
-
+public class Transaction {
+	
 	@Id
-	private String idProducto;
-	private String idBanco;
-	private String tipoProducto;
-	private String nombre;
+	private String idTransaccion;
+	private String origen;
+	private String destino;
+	private String tipoTransaccion;
 	private String descripcion;
+	private String moneda;
+	private Double monto;
+	private Double comision;
+	private Date fecha;
+	
 }

@@ -1,5 +1,7 @@
 package com.jvoq.proyecto1.app.models.entity;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,7 +18,14 @@ import lombok.Setter;
 public class Credit {
 
 	@Id
-	private String idCredit;
-	private double saldo;
+	private String idCredito;
+	private String idProducto;
+	private String idCliente;
+	private String numeroCredito;
 	private String moneda;
+	private Double lineaCredito;
+	private Double saldo;
+	private Double consumido;
+	private Double interes;
+	
 }

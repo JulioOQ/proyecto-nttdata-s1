@@ -14,13 +14,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Account {
-	
-	@Id	
+
+	@Id
 	private String idCuenta;
-	//private String nombreCuenta;
+	private String idProducto;
+	private String idCliente;
+	private String numeroCuenta;
+	private String moneda;
 	private Double saldo;
-	//private String tipoCuenta;
-	private String tipoMoneda;
-	
-	private Bank bank;
 }

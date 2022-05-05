@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jvoq.proyecto1.app.models.entity.Account;
 import com.jvoq.proyecto1.app.models.entity.Client;
+import com.jvoq.proyecto1.app.services.AccountService;
 import com.jvoq.proyecto1.app.services.ClientService;
 
 import reactor.core.publisher.Flux;
@@ -28,6 +30,9 @@ public class ClientController {
 
 	@Autowired
 	private ClientService clientService;
+
+	@Autowired
+	private AccountService accountService;
 
 	@GetMapping
 	public Mono<ResponseEntity<Flux<Client>>> getAll() {
@@ -47,6 +52,7 @@ public class ClientController {
 			client.setFechaCreacion(new Date());
 
 		}
+
 		return clientService.save(client)
 				.map(c -> ResponseEntity.created(URI.create("/clients".concat(c.getIdCliente())))
 						.contentType(MediaType.APPLICATION_JSON).body(c));
@@ -56,12 +62,14 @@ public class ClientController {
 	public Mono<ResponseEntity<Client>> update(@RequestBody Client client, @PathVariable String id) {
 		return clientService.findById(id).flatMap(c -> {
 			c.setNombres(client.getNombres());
-			c.setTipoCliente(client.getTipoCliente());
 			c.setCorreo(client.getCorreo());
-			c.setNumDocumento(client.getNumDocumento());
-			c.setBanks(client.getBanks());
+			c.setDireccion(client.getDireccion());
+			c.setTelefono(client.getTelefono());
 			c.setTipoDocumento(client.getTipoDocumento());
+			c.setNumDocumento(client.getNumDocumento());
+			c.setTipoCliente(client.getTipoCliente());
 			c.setRepresentantes(client.getRepresentantes());
+			c.setFechaCreacion(client.getFechaCreacion());
 
 			return clientService.save(c);
 		}).map(c -> ResponseEntity.created(URI.create("/clients".concat(c.getIdCliente())))
