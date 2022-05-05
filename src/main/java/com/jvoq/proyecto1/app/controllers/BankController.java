@@ -50,6 +50,7 @@ public class BankController {
 		return bankService.findById(id).flatMap(b -> {
 			b.setNombreBanco(bank.getNombreBanco());
 			b.setTotalTransferencia(bank.getTotalTransferencia());
+			b.setProduct(bank.getProduct());
 
 			return bankService.save(b);
 		}).map(b -> ResponseEntity.created(URI.create("/banks".concat(b.getIdBanco())))

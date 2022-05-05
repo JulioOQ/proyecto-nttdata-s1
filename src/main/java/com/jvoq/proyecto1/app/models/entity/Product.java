@@ -1,5 +1,7 @@
 package com.jvoq.proyecto1.app.models.entity;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -20,5 +22,6 @@ public class Product {
 	private String nombreProducto;
 	private String descripcion;
 	private String tipoProducto;
+	private List<Account> accounts;
 
 }
