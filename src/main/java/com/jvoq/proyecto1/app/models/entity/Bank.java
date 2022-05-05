@@ -1,5 +1,7 @@
 package com.jvoq.proyecto1.app.models.entity;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -19,5 +21,7 @@ public class Bank {
 	private String idBanco;
 	private String nombreBanco;
 	private String totalTransferencia;
+	private List<Product> product;
+	
 
 }

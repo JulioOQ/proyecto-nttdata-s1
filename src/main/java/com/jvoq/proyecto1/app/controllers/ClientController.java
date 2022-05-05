@@ -56,8 +56,12 @@ public class ClientController {
 	public Mono<ResponseEntity<Client>> update(@RequestBody Client client, @PathVariable String id) {
 		return clientService.findById(id).flatMap(c -> {
 			c.setNombres(client.getNombres());
+			c.setTipoCliente(client.getTipoCliente());
 			c.setCorreo(client.getCorreo());
 			c.setNumDocumento(client.getNumDocumento());
+			c.setBanks(client.getBanks());
+			c.setTipoDocumento(client.getTipoDocumento());
+			c.setRepresentantes(client.getRepresentantes());
 
 			return clientService.save(c);
 		}).map(c -> ResponseEntity.created(URI.create("/clients".concat(c.getIdCliente())))

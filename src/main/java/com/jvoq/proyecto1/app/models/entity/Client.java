@@ -1,6 +1,7 @@
 package com.jvoq.proyecto1.app.models.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,8 +20,13 @@ public class Client {
 	@Id
 	private String idCliente;
 	private String nombres;
+	private String tipoDocumento;
 	private String numDocumento;
 	private String correo;
+	private String tipoCliente;	
 	private Date fechaCreacion;
+	private List<String> representantes;
+	private List<Bank> banks;
+	
 
 }
