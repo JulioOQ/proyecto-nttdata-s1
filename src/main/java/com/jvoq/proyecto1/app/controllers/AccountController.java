@@ -40,11 +40,11 @@ public class AccountController {
 	}
 
 	@GetMapping("/client/{id}")
-	public Mono<ResponseEntity<Account>> getAccountByIdClient(@PathVariable String id) {
-		return accountService.findByIdClient(id)
-				.map(a -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(a))
-				.defaultIfEmpty(ResponseEntity.notFound().build());
+	public Mono<ResponseEntity<Flux<Account>>> getAccountByIdClient(@PathVariable String id) {
+		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(accountService.findAccoutsByIdClient(id)));
+
 	}
+	
 
 	@PostMapping
 	public Mono<ResponseEntity<Account>> create(@RequestBody Account account) {

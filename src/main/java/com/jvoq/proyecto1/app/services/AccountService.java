@@ -13,7 +13,7 @@ public interface AccountService {
 
 	public Mono<Account> save(Account account);
 	
-	public Mono<Account> findByIdClient(String idClient);
+	public Flux<Account> findAccoutsByIdClient(String idClient);
 
 	public Mono<Void> delete(Account account);
 }
