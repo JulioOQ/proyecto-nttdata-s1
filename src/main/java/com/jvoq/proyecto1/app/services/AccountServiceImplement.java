@@ -40,7 +40,7 @@ public class AccountServiceImplement implements AccountService {
 	}
 
 	@Override
-	public Mono<Account> findByIdClient(String idClient) {
-		return accountRepository.findByIdClient(idClient);
+	public Flux<Account> findAccountsdByIdProductoAndIdCliente(String idProducto, String idCliente) {
+		return accountRepository.findByIdProductoAndIdCliente(idProducto, idCliente);
 	}
 }

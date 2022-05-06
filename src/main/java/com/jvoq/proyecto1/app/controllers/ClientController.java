@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jvoq.proyecto1.app.models.entity.Account;
 import com.jvoq.proyecto1.app.models.entity.Client;
-import com.jvoq.proyecto1.app.services.AccountService;
 import com.jvoq.proyecto1.app.services.ClientService;
 
 import reactor.core.publisher.Flux;
@@ -30,9 +28,6 @@ public class ClientController {
 
 	@Autowired
 	private ClientService clientService;
-
-	@Autowired
-	private AccountService accountService;
 
 	@GetMapping
 	public Mono<ResponseEntity<Flux<Client>>> getAll() {
