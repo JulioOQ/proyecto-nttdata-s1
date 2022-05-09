@@ -1,0 +1,399 @@
+2022-05-09 00:12:10,602 ERROR [restartedMain] org.springframework.boot.SpringApplication: Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:297)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.jvoq.proyecto1.app.ProyectoSemana1Application.main(ProyectoSemana1Application.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+2022-05-09 00:12:30,817 ERROR [restartedMain] org.springframework.boot.SpringApplication: Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:297)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.jvoq.proyecto1.app.ProyectoSemana1Application.main(ProyectoSemana1Application.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+2022-05-09 00:17:43,635 ERROR [restartedMain] org.springframework.boot.SpringApplication: Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:297)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.jvoq.proyecto1.app.ProyectoSemana1Application.main(ProyectoSemana1Application.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+2022-05-09 00:18:42,992 ERROR [restartedMain] org.springframework.boot.SpringApplication: Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:297)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.jvoq.proyecto1.app.ProyectoSemana1Application.main(ProyectoSemana1Application.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+2022-05-09 00:20:11,345 ERROR [restartedMain] org.springframework.boot.SpringApplication: Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:297)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.jvoq.proyecto1.app.ProyectoSemana1Application.main(ProyectoSemana1Application.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:17 - no applicable action for [withJansi], current ElementPath  is [[configuration][appender][withJansi]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+2022-05-09 00:20:31,041 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting ProyectoSemana1Application using Java 17.0.2 on LIM-H97J3M3 with PID 2412 (C:\Users\jorequis\Documents\Proyectos\semana-1\proyecto-semana1\target\classes started by jorequis in C:\Users\jorequis\Documents\Proyectos\semana-1\proyecto-semana1)
+2022-05-09 00:20:31,043 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2022-05-09 00:20:31,096 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-09 00:20:31,096 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-09 00:20:31,586 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2022-05-09 00:20:31,719 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 128 ms. Found 6 Reactive MongoDB repository interfaces.
+2022-05-09 00:20:32,331 INFO [restartedMain] com.mongodb.diagnostics.logging.SLF4JLogger: Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=cluster0.8uq6g.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-5okwam-shard-0'}
+2022-05-09 00:20:32,384 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-01.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:20:32,410 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-00.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:20:32,411 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-02.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:20:32,476 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2022-05-09 00:20:33,106 INFO [cluster-rtt-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:2, serverValue:298580}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,106 INFO [cluster-rtt-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:3, serverValue:294545}] to cluster0-shard-00-00.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,106 INFO [cluster-rtt-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:4, serverValue:293372}] to cluster0-shard-00-02.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,106 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:6, serverValue:294541}] to cluster0-shard-00-00.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,106 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:5, serverValue:293368}] to cluster0-shard-00-02.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,106 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:1, serverValue:298571}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,107 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-02.8uq6g.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=327938800, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-02.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=626828f7c4f0d72bbfa45412, counter=3}, lastWriteDate=Mon May 09 00:20:32 PET 2022, lastUpdateTimeNanos=485589461400800}
+2022-05-09 00:20:33,107 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-01.8uq6g.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=326808900, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-01.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000007, setVersion=1, topologyVersion=TopologyVersion{processId=626828a6c3d9238f28558c83, counter=6}, lastWriteDate=Mon May 09 00:20:32 PET 2022, lastUpdateTimeNanos=485589461292000}
+2022-05-09 00:20:33,107 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-00.8uq6g.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=327831000, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-00.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=62682855769bcd834fbf2bb9, counter=4}, lastWriteDate=Mon May 09 00:20:32 PET 2022, lastUpdateTimeNanos=485589461292100}
+2022-05-09 00:20:33,109 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Setting max election id to 7fffffff0000000000000007 from replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,110 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Setting max set version to 1 from replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,110 INFO [cluster-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Discovered replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:20:33,657 INFO [restartedMain] org.springframework.boot.web.embedded.netty.NettyWebServer: Netty started on port 8080
+2022-05-09 00:20:33,665 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started ProyectoSemana1Application in 2.876 seconds (JVM running for 3.584)
+2022-05-09 00:21:03,413 INFO [cluster-rtt-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:9, serverValue:293373}] to cluster0-shard-00-02.8uq6g.mongodb.net:27017
+2022-05-09 00:21:03,416 INFO [cluster-rtt-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:7, serverValue:294550}] to cluster0-shard-00-00.8uq6g.mongodb.net:27017
+2022-05-09 00:21:03,416 INFO [cluster-rtt-ClusterId{value='6278a4a016fc0452260b6250', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:8, serverValue:298514}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:21:16,010 INFO [RMI TCP Connection(9)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2022-05-09 00:23:11,789 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting ProyectoSemana1Application using Java 17.0.2 on LIM-H97J3M3 with PID 3496 (C:\Users\jorequis\Documents\Proyectos\semana-1\proyecto-semana1\target\classes started by jorequis in C:\Users\jorequis\Documents\Proyectos\semana-1\proyecto-semana1)
+2022-05-09 00:23:11,792 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2022-05-09 00:23:11,839 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-09 00:23:11,840 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-09 00:23:12,304 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2022-05-09 00:23:12,462 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 153 ms. Found 6 Reactive MongoDB repository interfaces.
+2022-05-09 00:23:13,018 INFO [restartedMain] com.mongodb.diagnostics.logging.SLF4JLogger: Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=cluster0.8uq6g.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-5okwam-shard-0'}
+2022-05-09 00:23:13,072 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-01.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:23:13,105 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-00.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:23:13,107 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-02.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:23:13,206 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2022-05-09 00:23:13,830 INFO [cluster-rtt-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:2, serverValue:298615}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:23:13,831 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:6, serverValue:293406}] to cluster0-shard-00-02.8uq6g.mongodb.net:27017
+2022-05-09 00:23:13,831 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:5, serverValue:294573}] to cluster0-shard-00-00.8uq6g.mongodb.net:27017
+2022-05-09 00:23:13,831 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-02.8uq6g.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=346473600, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-02.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=626828f7c4f0d72bbfa45412, counter=3}, lastWriteDate=Mon May 09 00:23:12 PET 2022, lastUpdateTimeNanos=485750185890500}
+2022-05-09 00:23:13,831 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-00.8uq6g.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=346752000, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-00.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=62682855769bcd834fbf2bb9, counter=4}, lastWriteDate=Mon May 09 00:23:12 PET 2022, lastUpdateTimeNanos=485750186192200}
+2022-05-09 00:23:13,832 INFO [cluster-rtt-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:3, serverValue:293410}] to cluster0-shard-00-02.8uq6g.mongodb.net:27017
+2022-05-09 00:23:13,833 INFO [cluster-rtt-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:1, serverValue:294573}] to cluster0-shard-00-00.8uq6g.mongodb.net:27017
+2022-05-09 00:23:13,833 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:4, serverValue:298626}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:23:13,834 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-01.8uq6g.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=346403300, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-01.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000007, setVersion=1, topologyVersion=TopologyVersion{processId=626828a6c3d9238f28558c83, counter=6}, lastWriteDate=Mon May 09 00:23:12 PET 2022, lastUpdateTimeNanos=485750186168300}
+2022-05-09 00:23:13,836 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Setting max election id to 7fffffff0000000000000007 from replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:23:13,837 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Setting max set version to 1 from replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:23:13,837 INFO [cluster-ClusterId{value='6278a5412a8bf67757027285', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Discovered replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:23:14,585 INFO [restartedMain] org.springframework.boot.web.embedded.netty.NettyWebServer: Netty started on port 8080
+2022-05-09 00:23:14,595 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started ProyectoSemana1Application in 3.148 seconds (JVM running for 3.857)
+2022-05-09 00:23:35,666 INFO [reactor-http-nio-2] reactor.util.Loggers$Slf4JLogger: onSubscribe(FluxUsingWhen.UsingWhenSubscriber)
+2022-05-09 00:23:35,670 INFO [reactor-http-nio-2] reactor.util.Loggers$Slf4JLogger: request(unbounded)
+2022-05-09 00:23:36,275 INFO [nioEventLoopGroup-3-7] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:7, serverValue:298566}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:23:36,413 INFO [nioEventLoopGroup-3-7] reactor.util.Loggers$Slf4JLogger: onNext(com.jvoq.proyecto1.app.models.entity.Account@676154c7)
+2022-05-09 00:23:36,414 INFO [nioEventLoopGroup-3-7] reactor.util.Loggers$Slf4JLogger: onNext(com.jvoq.proyecto1.app.models.entity.Account@1b6332b)
+2022-05-09 00:23:36,416 INFO [nioEventLoopGroup-3-7] reactor.util.Loggers$Slf4JLogger: onNext(com.jvoq.proyecto1.app.models.entity.Account@609d38d3)
+2022-05-09 00:23:36,417 INFO [nioEventLoopGroup-3-7] reactor.util.Loggers$Slf4JLogger: onNext(com.jvoq.proyecto1.app.models.entity.Account@50026080)
+2022-05-09 00:23:36,418 INFO [nioEventLoopGroup-3-7] reactor.util.Loggers$Slf4JLogger: onNext(com.jvoq.proyecto1.app.models.entity.Account@55b141cf)
+2022-05-09 00:23:36,418 INFO [nioEventLoopGroup-3-7] reactor.util.Loggers$Slf4JLogger: onNext(com.jvoq.proyecto1.app.models.entity.Account@64a118d5)
+2022-05-09 00:23:36,419 INFO [nioEventLoopGroup-3-7] reactor.util.Loggers$Slf4JLogger: onNext(com.jvoq.proyecto1.app.models.entity.Account@6df3ef32)
+2022-05-09 00:23:36,423 INFO [nioEventLoopGroup-3-7] reactor.util.Loggers$Slf4JLogger: onComplete()
+2022-05-09 00:24:46,319 ERROR [nioEventLoopGroup-3-7] org.springframework.core.log.CompositeLog: [f838b949-3]  500 Server Error for HTTP POST "/clients"
+java.lang.RuntimeException: El cliente ya existe!
+	at com.jvoq.proyecto1.app.services.ClientServiceImplement.save(ClientServiceImplement.java:32)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Handler com.jvoq.proyecto1.app.controllers.ClientController#create(Client) [DispatcherHandler]
+	*__checkpoint ⇢ HTTP POST "/clients" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.jvoq.proyecto1.app.services.ClientServiceImplement.save(ClientServiceImplement.java:32)
+		at com.jvoq.proyecto1.app.controllers.ClientController.create(ClientController.java:62)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:144)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:101)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:151)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:159)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:400)
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:419)
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:600)
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:93)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:266)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:327)
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:299)
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+2022-05-09 00:29:14,018 ERROR [nioEventLoopGroup-3-7] org.springframework.core.log.CompositeLog: [f838b949-7]  500 Server Error for HTTP POST "/clients"
+java.lang.RuntimeException: El cliente ya existe!
+	at com.jvoq.proyecto1.app.services.ClientServiceImplement.save(ClientServiceImplement.java:32)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Handler com.jvoq.proyecto1.app.controllers.ClientController#create(Client) [DispatcherHandler]
+	*__checkpoint ⇢ HTTP POST "/clients" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.jvoq.proyecto1.app.services.ClientServiceImplement.save(ClientServiceImplement.java:32)
+		at com.jvoq.proyecto1.app.controllers.ClientController.create(ClientController.java:62)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:144)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:101)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:151)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:159)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:400)
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:419)
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:600)
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:93)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:266)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:327)
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:299)
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+2022-05-09 00:30:14,101 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting ProyectoSemana1Application using Java 17.0.2 on LIM-H97J3M3 with PID 3496 (C:\Users\jorequis\Documents\Proyectos\semana-1\proyecto-semana1\target\classes started by jorequis in C:\Users\jorequis\Documents\Proyectos\semana-1\proyecto-semana1)
+2022-05-09 00:30:14,101 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2022-05-09 00:30:14,254 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2022-05-09 00:30:14,271 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 6 Reactive MongoDB repository interfaces.
+2022-05-09 00:30:14,430 INFO [restartedMain] com.mongodb.diagnostics.logging.SLF4JLogger: Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=cluster0.8uq6g.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-5okwam-shard-0'}
+2022-05-09 00:30:14,636 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-01.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:30:14,639 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-00.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:30:14,641 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-srv-cluster0.8uq6g.mongodb.net] com.mongodb.diagnostics.logging.SLF4JLogger: Adding discovered server cluster0-shard-00-02.8uq6g.mongodb.net:27017 to client view of cluster
+2022-05-09 00:30:14,664 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2022-05-09 00:30:15,140 INFO [cluster-rtt-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:11, serverValue:294680}] to cluster0-shard-00-00.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,140 INFO [cluster-rtt-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:13, serverValue:293493}] to cluster0-shard-00-02.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,142 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:8, serverValue:298724}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,143 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-01.8uq6g.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=209132200, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-01.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000007, setVersion=1, topologyVersion=TopologyVersion{processId=626828a6c3d9238f28558c83, counter=6}, lastWriteDate=Mon May 09 00:30:14 PET 2022, lastUpdateTimeNanos=486171499116100}
+2022-05-09 00:30:15,145 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Setting max election id to 7fffffff0000000000000007 from replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,146 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Setting max set version to 1 from replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,147 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Discovered replica set primary cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,147 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:12, serverValue:293493}] to cluster0-shard-00-02.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,148 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:10, serverValue:294680}] to cluster0-shard-00-00.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,149 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-02.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-02.8uq6g.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=221082800, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-02.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=626828f7c4f0d72bbfa45412, counter=3}, lastWriteDate=Mon May 09 00:30:14 PET 2022, lastUpdateTimeNanos=486171504440100}
+2022-05-09 00:30:15,149 INFO [cluster-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-00.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-00.8uq6g.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=220474600, setName='atlas-5okwam-shard-0', canonicalAddress=cluster0-shard-00-00.8uq6g.mongodb.net:27017, hosts=[cluster0-shard-00-01.8uq6g.mongodb.net:27017, cluster0-shard-00-02.8uq6g.mongodb.net:27017, cluster0-shard-00-00.8uq6g.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.8uq6g.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='SA_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=62682855769bcd834fbf2bb9, counter=4}, lastWriteDate=Mon May 09 00:30:14 PET 2022, lastUpdateTimeNanos=486171504555800}
+2022-05-09 00:30:15,150 INFO [cluster-rtt-ClusterId{value='6278a6e62a8bf67757027288', description='null'}-cluster0-shard-00-01.8uq6g.mongodb.net:27017] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:9, serverValue:298724}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:30:15,667 INFO [restartedMain] org.springframework.boot.web.embedded.netty.NettyWebServer: Netty started on port 8080
+2022-05-09 00:30:15,676 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started ProyectoSemana1Application in 1.599 seconds (JVM running for 424.938)
+2022-05-09 00:30:15,680 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+2022-05-09 00:30:43,522 INFO [nioEventLoopGroup-5-7] com.mongodb.diagnostics.logging.SLF4JLogger: Opened connection [connectionId{localValue:14, serverValue:298709}] to cluster0-shard-00-01.8uq6g.mongodb.net:27017
+2022-05-09 00:33:40,811 INFO [RMI TCP Connection(22)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.

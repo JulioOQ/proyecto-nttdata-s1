@@ -44,6 +44,13 @@ public class ClientController {
 				.defaultIfEmpty(ResponseEntity.notFound().build());
 
 	}
+	
+	@GetMapping("/{numDocumento}")
+	public Mono<ResponseEntity<Client>> getByNumDocumento(@PathVariable String numDocumento) {
+		return clientService.findByNumDocumento(numDocumento).map(c -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(c))
+				.defaultIfEmpty(ResponseEntity.notFound().build());
+
+	}
 
 	@PostMapping
 	public Mono<ResponseEntity<Client>> create(@RequestBody Client client) {

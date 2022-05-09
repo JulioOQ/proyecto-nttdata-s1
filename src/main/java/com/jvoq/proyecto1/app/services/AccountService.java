@@ -1,5 +1,6 @@
 package com.jvoq.proyecto1.app.services;
 
+
 import com.jvoq.proyecto1.app.models.entity.Account;
 
 import reactor.core.publisher.Flux;
@@ -12,8 +13,12 @@ public interface AccountService {
 	public Mono<Account> findById(String id);
 
 	public Mono<Account> save(Account account);
-	
-	public Flux<Account> findAccoutsByIdClient(String idClient);
 
 	public Mono<Void> delete(Account account);
+	
+	public Flux<Account> findAccoutsByIdClient(String idClient);
+	
+	public Mono<Account> findProductByIdClientAndIdProduct(String idClient,String idProduct);
+	
+	
 }

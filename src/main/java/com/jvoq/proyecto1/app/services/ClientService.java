@@ -10,6 +10,8 @@ public interface ClientService {
 	public Flux<Client> findAll();
 
 	public Mono<Client> findById(String id);
+	
+	public Mono<Client> findByNumDocumento(String numDocumento);
 
 	public Mono<Client> save(Client client);
 

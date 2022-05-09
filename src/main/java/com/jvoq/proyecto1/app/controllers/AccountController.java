@@ -1,6 +1,7 @@
 package com.jvoq.proyecto1.app.controllers;
 
 import java.net.URI;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.jvoq.proyecto1.app.models.entity.Account;
 import com.jvoq.proyecto1.app.services.AccountService;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/accounts")
+@RequestMapping("accounts")
 public class AccountController {
 
 	@Autowired
@@ -45,10 +46,22 @@ public class AccountController {
 
 	}
 	
+	@GetMapping("/client/{idCliente}/product/{idProducto}")
+	public Mono<ResponseEntity<Account>> getProductByIdClientAndIdProduct(@PathVariable String idCliente, @PathVariable String idProducto) {
+		return accountService.findProductByIdClientAndIdProduct(idCliente, idProducto).map(a -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(a))
+				.defaultIfEmpty(ResponseEntity.notFound().build());
 
+	}
+	
+	
 	@PostMapping
 	public Mono<ResponseEntity<Account>> create(@RequestBody Account account) {
-		return accountService.save(account)
+		
+		if (account.getFechaCreacion() == null) {
+			account.setFechaCreacion(new Date());
+
+		}
+	return accountService.save(account)
 				.map(a -> ResponseEntity.created(URI.create("/accounts".concat(a.getIdCuenta())))
 						.contentType(MediaType.APPLICATION_JSON).body(a));
 	}

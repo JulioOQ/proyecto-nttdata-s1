@@ -27,12 +27,25 @@ public class ClientServiceImplement implements ClientService {
 
 	@Override
 	public Mono<Client> save(Client client) {
-		return clientRepository.save(client);
+		return this.findByNumDocumento(client.getNumDocumento())
+				.switchIfEmpty(clientRepository.save(client));
+				
+				
+		
 	}
 
 	@Override
 	public Mono<Void> delete(Client client) {
 		return clientRepository.delete(client);
 	}
+	
+	
+
+	@Override
+	public Mono<Client> findByNumDocumento(String numDocumento) {
+		// TODO Auto-generated method stub
+		return this.clientRepository.findByNumDocumento(numDocumento);
+	}	
+
 
 }
