@@ -1,7 +1,9 @@
 package com.jvoq.proyecto1.app.controllers;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jvoq.proyecto1.app.models.entity.Account;
 import com.jvoq.proyecto1.app.services.AccountService;
+import com.jvoq.proyecto1.app.services.ClientService;
+import com.jvoq.proyecto1.app.services.ProductService;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -27,6 +32,12 @@ public class AccountController {
 
 	@Autowired
 	AccountService accountService;
+
+	@Autowired
+	private ClientService clientService;
+
+	@Autowired
+	private ProductService productService;
 
 	@GetMapping
 	public Mono<ResponseEntity<Flux<Account>>> getAll() {
@@ -51,6 +62,7 @@ public class AccountController {
 		if (account.getFechaCreacion() == null) {
 			account.setFechaCreacion(new Date());
 		}
+
 		return accountService.save(account)
 				.map(a -> ResponseEntity.created(URI.create("/accounts".concat(a.getIdCuenta())))
 						.contentType(MediaType.APPLICATION_JSON).body(a));

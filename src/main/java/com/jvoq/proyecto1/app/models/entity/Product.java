@@ -40,4 +40,7 @@ public class Product {
 	@JsonProperty("costo_apertura")
 	private Boolean costoApertura;
 	
+	private int juridico;
+	private int natural;
+	
 }
