@@ -41,11 +41,18 @@ public class ClientController {
 
 	}
 
+	@GetMapping("/{numDocumento}")
+	public Mono<ResponseEntity<Client>> getByNumDocumento(@PathVariable String numDocumento) {
+		return clientService.findByNumDocumento(numDocumento)
+				.map(c -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(c))
+				.defaultIfEmpty(ResponseEntity.notFound().build());
+
+	}
+
 	@PostMapping
 	public Mono<ResponseEntity<Client>> create(@RequestBody Client client) {
 		if (client.getFechaCreacion() == null) {
 			client.setFechaCreacion(new Date());
-
 		}
 
 		return clientService.save(client)
@@ -63,8 +70,7 @@ public class ClientController {
 			c.setTipoDocumento(client.getTipoDocumento());
 			c.setNumDocumento(client.getNumDocumento());
 			c.setTipoCliente(client.getTipoCliente());
-			c.setTitulares(client.getTitulares());
-			c.setFirmantes(client.getFirmantes());
+			c.setRepresentantes(client.getRepresentantes());
 			c.setFechaCreacion(client.getFechaCreacion());
 
 			return clientService.save(c);

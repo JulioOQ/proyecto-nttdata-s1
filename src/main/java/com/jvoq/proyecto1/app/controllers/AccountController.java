@@ -18,12 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jvoq.proyecto1.app.models.entity.Account;
 import com.jvoq.proyecto1.app.services.AccountService;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/accounts")
+@RequestMapping("accounts")
 public class AccountController {
 
 	@Autowired
@@ -40,12 +39,6 @@ public class AccountController {
 				.defaultIfEmpty(ResponseEntity.notFound().build());
 	}
 
-	@GetMapping("/products")
-	public Mono<ResponseEntity<Flux<Account>>> findByIdProductAndIdClient(@RequestBody Account account) {
-		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(
-				accountService.findAccountsdByIdProductoAndIdCliente(account.getIdProducto(), account.getIdCliente())));
-	}
-
 	@GetMapping("/client/{id}")
 	public Mono<ResponseEntity<Flux<Account>>> getAccountByIdClient(@PathVariable String id) {
 		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON)
@@ -57,7 +50,6 @@ public class AccountController {
 
 		if (account.getFechaCreacion() == null) {
 			account.setFechaCreacion(new Date());
-
 		}
 		return accountService.save(account)
 				.map(a -> ResponseEntity.created(URI.create("/accounts".concat(a.getIdCuenta())))

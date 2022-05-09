@@ -19,4 +19,5 @@ public interface AccountService {
 
 	public Flux<Account> findAccountsdByIdProductoAndIdCliente(String idProducto, String idCliente);
 
+	public Mono<Account> findProductByIdClientAndIdProduct(String idClient, String idProduct);
 }

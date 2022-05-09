@@ -50,10 +50,12 @@ public class ProductController {
 	@PutMapping("/{id}")
 	public Mono<ResponseEntity<Product>> update(@RequestBody Product product, @PathVariable String id) {
 		return productService.findById(id).flatMap(p -> {
-			p.setIdBanco(product.getIdBanco());
+			//p.setIdBanco(product.getIdBanco());
+			//p.setBank(product.getBank());
 			p.setTipoProducto(product.getTipoProducto());
 			p.setNombre(product.getNombre());
 			p.setDescripcion(product.getDescripcion());
+			p.setCostoApertura(product.getCostoApertura());
 
 			return productService.save(p);
 		}).map(p -> ResponseEntity.created(URI.create("/products".concat(p.getIdProducto())))

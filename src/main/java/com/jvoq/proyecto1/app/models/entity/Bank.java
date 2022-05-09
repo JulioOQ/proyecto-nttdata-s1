@@ -1,7 +1,12 @@
 package com.jvoq.proyecto1.app.models.entity;
 
+
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,13 +18,16 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonPropertyOrder({ "idBanco", "nombre", "ruc", "telefono","telefono","correo","direccion"})
 public class Bank {
 
 	@Id
+	@JsonProperty("id_banco")
 	private String idBanco;
 	private String nombre;
 	private String correo;
 	private String direccion;
 	private String telefono;
 	private String ruc;
+	
 }

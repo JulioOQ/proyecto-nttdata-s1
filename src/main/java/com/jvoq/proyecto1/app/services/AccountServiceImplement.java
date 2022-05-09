@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jvoq.proyecto1.app.models.entity.Account;
-import com.jvoq.proyecto1.app.models.repository.AccountRepository;
 
+import com.jvoq.proyecto1.app.models.repository.AccountRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -43,5 +43,10 @@ public class AccountServiceImplement implements AccountService {
 	@Override
 	public Flux<Account> findAccountsByIdClient(String idClient) {
 		return accountRepository.findAccountByIdCliente(idClient);
+	}
+
+	public Mono<Account> findProductByIdClientAndIdProduct(String idClient, String idProduct) {
+		return accountRepository.findAccountByIdClienteAndIdProducto(idClient, idProduct);
+
 	}
 }
