@@ -21,7 +21,5 @@ public class Bank {
 	private String correo;
 	private String direccion;
 	private String telefono;
-	private String tipoDocumento;
-	private String numDocumento;
-
+	private String ruc;
 }

@@ -10,10 +10,13 @@ public interface AccountService {
 	public Flux<Account> findAll();
 
 	public Mono<Account> findById(String id);
-	
-	public Flux<Account> findAccountsdByIdProductoAndIdCliente(String idProducto, String idCliente);
 
 	public Mono<Account> save(Account account);
 
 	public Mono<Void> delete(Account account);
+
+	public Flux<Account> findAccountsByIdClient(String idClient);
+
+	public Flux<Account> findAccountsdByIdProductoAndIdCliente(String idProducto, String idCliente);
+
 }

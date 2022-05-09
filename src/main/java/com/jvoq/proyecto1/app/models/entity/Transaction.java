@@ -16,7 +16,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Transaction {
-	
+
 	@Id
 	private String idTransaccion;
 	private String origen;
@@ -27,5 +27,4 @@ public class Transaction {
 	private Double monto;
 	private Double comision;
 	private Date fecha;
-	
 }

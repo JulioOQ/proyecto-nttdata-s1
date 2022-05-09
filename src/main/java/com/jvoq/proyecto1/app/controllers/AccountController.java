@@ -1,6 +1,7 @@
 package com.jvoq.proyecto1.app.controllers;
 
 import java.net.URI;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -41,12 +42,23 @@ public class AccountController {
 
 	@GetMapping("/products")
 	public Mono<ResponseEntity<Flux<Account>>> findByIdProductAndIdClient(@RequestBody Account account) {
-		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(accountService
-				.findAccountsdByIdProductoAndIdCliente(account.getIdProducto(), account.getIdCliente())));
+		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(
+				accountService.findAccountsdByIdProductoAndIdCliente(account.getIdProducto(), account.getIdCliente())));
+	}
+
+	@GetMapping("/client/{id}")
+	public Mono<ResponseEntity<Flux<Account>>> getAccountByIdClient(@PathVariable String id) {
+		return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON)
+				.body(accountService.findAccountsByIdClient(id)));
 	}
 
 	@PostMapping
 	public Mono<ResponseEntity<Account>> create(@RequestBody Account account) {
+
+		if (account.getFechaCreacion() == null) {
+			account.setFechaCreacion(new Date());
+
+		}
 		return accountService.save(account)
 				.map(a -> ResponseEntity.created(URI.create("/accounts".concat(a.getIdCuenta())))
 						.contentType(MediaType.APPLICATION_JSON).body(a));

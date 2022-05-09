@@ -63,7 +63,8 @@ public class ClientController {
 			c.setTipoDocumento(client.getTipoDocumento());
 			c.setNumDocumento(client.getNumDocumento());
 			c.setTipoCliente(client.getTipoCliente());
-			c.setRepresentantes(client.getRepresentantes());
+			c.setTitulares(client.getTitulares());
+			c.setFirmantes(client.getFirmantes());
 			c.setFechaCreacion(client.getFechaCreacion());
 
 			return clientService.save(c);

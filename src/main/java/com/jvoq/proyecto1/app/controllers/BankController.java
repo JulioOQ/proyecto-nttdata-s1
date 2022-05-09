@@ -52,8 +52,7 @@ public class BankController {
 			b.setCorreo(bank.getCorreo());
 			b.setDireccion(bank.getDireccion());
 			b.setTelefono(bank.getTelefono());
-			b.setTipoDocumento(bank.getTipoDocumento());
-			b.setNumDocumento(bank.getNumDocumento());
+			b.setRuc(bank.getRuc());
 
 			return bankService.save(b);
 		}).map(b -> ResponseEntity.created(URI.create("/banks".concat(b.getIdBanco())))
